@@ -1,6 +1,8 @@
 <!doctype html>
 <html ng-app>
+
 <head>
+    <title>ncvbncvbn</title>
     <script type="application/javascript" src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
     <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="assets/js/main.js"></script>
@@ -9,21 +11,22 @@
 </head>
 
 <body>
-<div ng-controller="AchCtrl">
-    {{getTotallist()}}
-    <ul class="unstyle">
-        <li ng-repeat="ListVal in ListVals">
-            <input type="checkbox" ng-model="ListVal.done" />
-            <span class="List-{{ListVal.done}}">{{ListVal.text}}</span>
-        </li>
-    </ul>
-    <form class="">
-        <input type="text" ng-model="formEnterVal" ng-modle-instant />
-        <button class="btn" ng-click="Addlist()"> Add</button>
-    </form>
-    <button class="btn" ng-click="clearList()"> Add</button>
-</div>
+    <div ng-controller="AchCtrl">
+        {{getTotallist()}}
+        <ul class="unstyle">
+            <li ng-repeat="ListVal in ListVals">
+                <input type="checkbox" ng-model="ListVal.done" />
+                <span class="List-{{ListVal.done}}">{{ListVal.text}}</span>
+            </li>
+        </ul>
+        <form class="">
+            <input type="text" ng-model="formEnterVal" ng-modle-instant />
+            <button class="btn" ng-click="Addlist()"> Add</button>
+        </form>
+        <button class="btn" ng-click="clearList()"> Add</button>
+    </div>
 
 
 </body>
+
 </html>
